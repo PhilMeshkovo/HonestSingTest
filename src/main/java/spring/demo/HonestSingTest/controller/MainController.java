@@ -23,7 +23,7 @@ public class MainController {
     public ResponseEntity<?> postOrder(@RequestBody Order order) {
         try {
             orderService.postOrder(order);
-            return new ResponseEntity<String>("Success", HttpStatus.OK);
+            return new ResponseEntity("Success", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
