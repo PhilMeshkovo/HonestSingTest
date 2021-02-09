@@ -1,16 +1,19 @@
 package spring.demo.HonestSingTest.model;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NonNull;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Data
+@AllArgsConstructor
 public class Product {
-    @NonNull
+    @NotEmpty
     private String name;
-    @NonNull
+    @NotEmpty
     @Size(min = 13, max = 13)
     private String code;
+
 }
