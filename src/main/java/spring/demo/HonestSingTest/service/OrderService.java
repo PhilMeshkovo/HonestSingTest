@@ -21,13 +21,7 @@ public class OrderService {
     public void postOrder(Order order) throws Exception {
         OrderStorage orderStorage = new OrderStorage();
         log.log(Level.INFO, "получаем любой экземпляр с нарушением кода");
-        Optional<Product> unexepctedCode = Arrays.stream(order.getProducts()).filter(p -> p.getCode().length() != productCodeLen).findFirst();
-        if (unexepctedCode.isPresent()) {
-            throw new Exception("Код товара должен быть длиной 13 символов");
-        } else {
             log.log(Level.INFO, "Пробуем сохранить заказ");
             orderStorage.save(order);
-        }
-
     }
 }
