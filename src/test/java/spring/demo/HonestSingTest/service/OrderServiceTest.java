@@ -27,7 +27,7 @@ public class OrderServiceTest {
         try {
             orderService.postOrder(order);
         } catch (Exception e) {
-            Assert.assertEquals("Идентификатор продавца должен быть длиной 9 символов",
+            Assert.assertEquals("Длина id покупателя и продавца должна составлять 9 символов",
                     e.getMessage());
         }
     }
