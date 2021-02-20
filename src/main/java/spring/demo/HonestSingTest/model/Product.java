@@ -6,7 +6,6 @@ import lombok.Data;
 import spring.demo.HonestSingTest.annotations.CodeLengthValid;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor
